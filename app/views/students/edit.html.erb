@@ -1,0 +1,7 @@
+<h1><%= @student.to_s %></h1>
+<h2>Edit status:</h2>
+<form action="activate_student_path(@student.id)" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+    <input type="checkbox" name="active"<%='checked' if @student.active != true %>>active</input>
+  <input type="submit" value="Submit">
+</form>
